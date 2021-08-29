@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+  
+    <style>
+        body {
+            font-size:14px;
+        }
+        /*解决元素浮动后到来的高度塌陷 */
+        .clearfix::before,
+        .clearfix::after {
+            content:"";
+            display:table;
+            clear:both;
+        }
+        .top-bar-wraper {
+            width:100%;
+            height:30px;
+            /* 设置行高使文字在容器中水平居中 */
+            line-height:30px;
+            border-bottom:1px #E1E1E1 solid;
+            background-color:#E3E4E5;
+        }
+        .top-bra{
+            width:1190px;
+            margin:0px auto;
+        }
+        .location {
+            float:left;
+            margin-left: 100px;
+            position: relative;
+        }
+        .location a {
+            margin:0 auto;
+        }
+        /*将列表向右浮动*/
+        .shutcut {
+            float:right;
+        }
+        /*设置li向左浮动*/
+        .shutcut li {
+            float:left;
+        }
+        .top-bar a,
+        .top-bar i {
+            color:#999;
+            text-decoration: none;
+        }
+        .top-bar a:hover {
+            color:#f10215;
+        }
+        .top-bar .high {
+            color:#f10215;
+        }
+        /*设置分割线*/
+        .shutcut .line {
+            width:1px;
+            height:10px;
+            background-color: #999;
+            margin:10px 12px;
+        }
+        .location i{
+            color:red;
+        }
+        .location .city-list {
+            width: 320px;
+            height: 436px;
+            background-color: white;
+            display:none;
+            border:1px solid rgb(204,204,204);
+            border-top:none;
+            /*设置绝对定位使其脱离文档流，如果不设置定位，则显示是>    会影响页面布局*/
+            position: absolute;
+            top:29px;
+            /*设置阴影*/
+            box-shadow:0 2px 2px rgba(0,0,0,0.2);
+            /*设置层级*/
+            z-index: 9999;
+        }
+        /*移入效果设置在lication上，因为其包含city和city-list*/
+        .location:hover
+        .city-list
+        {
+            display:block;
+        }
+        .city {
+            height: 30px;
+            line-height:30px;
+            padding: 0 10px;
+            border:1px solid transparent;
+            border-bottom:none;
+            margin-top:1px;
+            position: relative;
+            z-index:9999;
+        }
+        /*当鼠标移入是设置背景色*/
+        .location:hover .city {
+            background-color:white;
+            border:1px #cccccc solid;
+            border-bottom:none;
+        }
+        .city-list a {
+            display:block;
+            float:left;
+            width:60px;
+            text-align: center;
+            text-decoration: none;
+            line-height: 20px;
+            margin:4px auto;
+       
+          
+        }
+    </style>
+</head>
+<body>
+    <!--创建外部容器-->
+    <div class="top-bar-wraper">
+            <!--创建内部容器-->
+        <div class="top-bar clearfix">
+            <div class="location">
+                <div class="city">
+                    <a href="javescript:;">
+                    <i class = "fas fa-map-marker-alt"></i>
+                    </a>
+                    <a href="javescript:;">江西</a>
+                </div>
+                <!--放置一个城市列表-->
+                <div class="city-list">
+                    <a href="">北京</a>
+                    <a href="">上海</a>
+                    <a href="">天津</a>
+                    <a href="">重庆</a>
+                    <a href="">安徽</a>
+                    <a href="">福建</a>
+                    <a href="">甘肃</a>
+                    <a href="">广东</a>
+                    <a href="">贵州</a>
+                    <a href="">海南</a>
+                    <a href="">河北</a>
+                    <a href="">河南</a>
+                    <a href="">湖北</a>
+                    <a href="">湖南</a>
+                    <a href="">吉林</a>
+                    <a href="">江苏</a>
+                    <a href="">江西</a>
+                    <a href="">辽宁</a>
+                    <a href="">宁夏</a>
+                    <a href="">青海</a>
+                    <a href="">山东</a>
+                    <a href="">山西</a>
+                    <a href="">陕西</a>
+                    <a href="">四川</a>
+                    <a href="">西藏</a>
+                    <a href="">新疆</a>
+                    <a href="">云南</a>
+                    <a href="">浙江</a>
+                    <a href="">黑龙江</a>
+                    <a href="">内蒙古</a>
+
+
+                </div>
+            </div>
+            <ul class="shutcut">
+                <li>
+                    <a class = "shutcut-text"href="javescript:;"><s    pan>你好，请登录</span></a>
+                    <a class = "shutcut-text"href="javescript:;"><s    pan>免费注册</span></a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript:;"><s    pan>我的订单</span></a>
+
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript"><spa    n>我的京东</span></a>
+
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript"><spa    n>京东会员</span></a>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text high"href="javescript"    ><span>企业采购</span></a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript"><spa    n>客户服务</span></a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript"><spa    n>网站导航</span></a>
+                    <i class="fas fa-angle-down"></i>
+                </li>
+                <li class="line"></li>
+                <li>
+                    <a class = "shutcut-text"href="javescript"><spa    n>手机京东</span></a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</body>
+</html>

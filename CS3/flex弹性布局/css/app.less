@@ -1,0 +1,190 @@
+* {
+    margin : 0px;
+    padding: 0px;
+}
+
+// 设计图宽度
+@total-width: 750;
+
+.w {
+    width : (693/40rem);
+    margin: 0px auto;
+}
+
+// 设置根元素
+html {
+    // 设置rem的比值  
+    font-size       : (100vw/@total-width) * 40;
+    background-color: #eff0f4;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+// 设置头部header
+.top-bar:extend(.w) {
+    //设置弹性容器
+    display        : flex;
+    height         : (175/40rem);
+    line-height    : (175/40rem);
+    justify-content: space-between;
+    align-items    : center;
+
+
+
+    a {
+        color    : #24253d;
+        font-size: (50/40rem);
+
+        i {
+            color    : #979999;
+            font-size: (20/40rem);
+        }
+    }
+}
+
+/* 图片 */
+.banner:extend(.w) {
+    img {
+        width: 100%;
+    }
+}
+
+.menu:extend(.w) {
+    //确认元素的高度
+    height         : (329/40rem);
+    display        : flex;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+    align-content  : space-evenly;
+
+    a {
+        width        : (327/40rem);
+        height       : (104/40rem);
+        color        : white;
+        border-radius: (8/40rem);
+        line-height  : (104/40rem);
+
+        i {
+            margin: 0 (30/40rem) 0 (36/40rem);
+        }
+    }
+
+    .course {
+        background-color: #f47258;
+    }
+
+    .star {
+        background-color: #d07ffa;
+    }
+
+    .sub {
+        background-color: #fd3a70;
+    }
+
+    .dow {
+        background-color: #1ac0f8;
+    }
+
+}
+
+/* 标题以及滚动栏*/
+.imga {
+    height         : (394/40rem);
+    display        : flex;
+    flex-flow      : column;
+    justify-content: space-between;
+    margin-bottom: (46/40rem);
+    .imga-title {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        
+
+        h2 {
+            font-size   : (33/40rem);
+            color       : #24253d;
+            border-left : (3/40rem) solid #3a83ff;
+            padding-left: (4/40rem);
+
+        }
+
+        a {
+            font-size: (28/40rem);
+            color    : #808283;
+        }
+    }
+
+
+
+
+    //设置图片
+    .visit{
+        width: (720/40rem);
+        height: (720/40rem);
+        display        : flex;
+        overflow: auto;
+        align-items: center;
+
+
+        .item {
+            flex: none;
+            width           : (320/40rem);
+            height          : (327/40rem);
+            background-color: #fcfffc;
+            border-radius   : (15/40rem);
+            box-shadow      : 0 0 (10/40rem) rgba(0, 0, 0, .3);
+            display         : flex;
+            flex-flow       : column;
+            justify-content : space-evenly;
+            margin-right: (24/40rem);
+
+            .cover {
+                width : (300/40rem);
+                margin: 0px auto;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+
+
+        h2 {
+            font-size   : (24/40rem);
+            padding-left: (8/40rem);
+
+        }
+
+        //头像
+        .img-title {
+            display    : flex;
+            align-items: center;
+            margin-top : (10/40rem);
+
+            .img-header {
+                width      : (42/40rem);
+                height     : (42/40rem);
+                margin-left: (10/40rem);
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            // 用户昵称
+            h2 {
+                font-size: (24/40rem);
+                color    : #969393;
+            }
+        }
+    }
+
+
+
+
+
+}

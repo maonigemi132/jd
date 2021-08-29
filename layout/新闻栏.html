@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻栏</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color: rgb(26, 133, 49);
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        /* 设置容器样式 */
+        .xin{
+            width: 297px;
+            height: 359px;
+            margin: 50px auto;
+            border-top: 1px  black solid ;
+            
+        }
+        /* 标题 */
+        .news-title{
+            border-top: 1px red solid;
+            margin-top: -1px;
+            display: inline-block;
+            height: 30px;
+            padding-top: 10px;
+            
+            
+        }
+
+        .news-title a{
+            text-decoration: none;
+            color: #40406B;
+            font-weight: bold;
+            
+        }
+
+        /* 图片标题 */
+       .news-heng .news-heng-title{
+            margin-top: -36px;
+            font-size: 18px;
+            color: #fff;
+            font-weight:bold ;
+            padding-left: 40px;
+       }
+
+       /* 图片高度设置 如果不设置下面的内容会跟上来 */
+       .news-heng{
+          height: 150px;
+       }
+
+
+       .wen li a{
+           color: grey;
+           font-size: 15px;
+           
+       }
+
+       .wen{
+        margin-top: 20px;      
+       
+       }
+       .wen li{
+            margin-bottom: 17px;
+            list-style: none;
+       }
+
+       .wen li a:hover{
+           color: red;
+       }
+
+       .wen li::before{
+           content: '■';
+           font-size: 12px;
+           color: rgb(218, 218, 218);
+       }
+
+       .wen a{
+           padding-left: 8px;
+       }
+
+       
+
+    </style>
+</head>
+<body>
+     <div class="xin">
+        <h2 class="news-title"><a href="#">体育</a></h2>
+        <div class="news-heng">
+            <a href="javaScript:;"><img src="image/xinwen.png" >
+                <h3 class="news-heng-title">失败乃成功他妈</h3>
+        </a>
+        </div>  
+
+            <!-- 新闻列表 -->
+          <ul class="wen" id="wen">   
+            <li><a href="javaScript:;">乔治:我爱LA 喜欢和LBJ一起打球</a></li>
+            <li><a href="javaScript:;">乔治:我爱LA 喜欢和LBJ一起打球</a></li>
+            <li><a href="javaScript:;">乔治:我爱LA 喜欢和LBJ一起打球</a></li>
+            <li><a href="javaScript:;">乔治:我爱LA 喜欢和LBJ一起打球</a></li>
+          </ul>
+            
+     </div>
+      
+        
+    
+</body>
+</html>

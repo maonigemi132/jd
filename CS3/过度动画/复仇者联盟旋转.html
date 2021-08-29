@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        html{
+            /* 设置当前网页的视距为800px,人眼距离网页的距离 */
+            perspective: 800px;
+        }
+        .wai{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            position: relative;
+            /* 设置3d效果 */
+            transform-style: preserve-3d;
+            transform: rotateX(90deg)rotateY(45deg) rotateZ(45deg)   ;
+            animation: run 3s infinite;    
+        }
+
+        .wai > div{
+            width: 200px;
+            height: 200px;
+            vertical-align: bottom;
+            /* 可以为元素设置透明效果 */
+            opacity: 0.8;
+            position: absolute; 
+        }
+        .i1{
+           
+            transform: rotatey(90deg) translateZ(100px);
+            
+        }
+        .i2{
+           transform: rotatey(-90deg) translateZ(100px);
+        }
+    
+
+        .i3{
+
+           transform: rotateX(90deg) translateZ(100px);
+        }
+
+        .i4{
+
+           transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        .i5{
+           transform:rotateY(180deg) translateZ(100px);
+        }
+
+        .i6{
+
+           transform:rotateY(0deg) translateZ(100px);
+        }
+
+       
+       
+       @keyframes run{
+           from{
+                transform:rotateX(0) rotateZ(0);
+           }
+
+         
+           to{
+                transform:rotatey(1turn) rotateZ(1turn) ;
+           }
+       }
+        
+    
+
+    </style>
+</head>
+<body>
+
+    <div class="wai">
+        <div class="i1"><img src="./14/1.jpg"></div>
+        <div class="i2"><img src="./14/2.jpg"></div>
+        <div class="i3"><img src="./14/3.jpg"></div>
+        <div class="i4"><img src="./14/4.jpg"></div>
+        <div class="i5"><img src="./14/5.jpg"></div>
+        <div class="i6"><img src="./14/6.jpg"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+         .box{
+             width: 600px;
+             height: 600px;
+             margin: 0px auto;
+             margin-top: 60px;
+             border-radius: 50%;
+             border: 4px black solid;
+             position: relative;
+             background-image: url(./11/bg3.jpg);
+             background-size: cover;
+         }
+
+         .shi,.fen,.miao{
+            position: absolute;
+             left: 0;
+             right: 0;
+             top: 0;
+             bottom: 0;
+             margin:auto;        
+
+         }
+
+         /* 时 */
+         .shi{
+             width: 60%;
+             height: 60%;   
+             animation:run 43200s steps(60);         
+         }
+
+         .box2{
+             width: 8px;
+             height: 50%;
+             background-color: black;
+             margin: 0px auto;
+         }
+         /* 分 */
+         .fen{
+            width: 70%;
+             height: 70%;  
+             animation:run 3600s steps(60);   
+         }
+
+         .box3{
+             width: 4px;
+             height: 50%;
+             background-color: black;
+             margin: 0px auto;
+         }
+
+
+          /* 秒 */
+          .miao{
+            width: 80%;
+            height: 80%;     
+            animation:run 60s steps(60); 
+         }
+
+         .box4{
+             width: 2px;
+             height: 50%;
+             background-color: red;
+             margin: 0px auto;   
+         }
+
+
+         @keyframes run{
+             from{
+                transform: rotatez(0);
+             }
+
+             to{
+                transform: rotatez(360deg);
+             }
+         }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="shi">
+            <div class="box2"></div>
+        </div>
+
+        <div class="fen">
+            <div class="box3"></div>
+        </div>
+
+        <div class="miao">
+            <div class="box4"></div>
+        </div>
+    </div>
+    
+</body>
+</html>

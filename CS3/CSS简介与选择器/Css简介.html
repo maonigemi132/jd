@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 第二种方式 把样式写在head的style中 缺点，如果都写进来显得臃肿 -->
+    <style >
+        /* 对所有p标签都实现效果 通过CSS选择器选中元素（标签）设置各种样式 */
+        p{
+            color: green;
+        }
+    </style>
+    <!-- 第三种方式 外部样式表 外部样式表需要通过link样式引入 
+        意味着只要想使用这些样式的都可以进行引用 ,使样式可以在不同的页面进行复用
+    -->
+    <link rel="stylesheet" href="CSS/style.css">
+
+</head>
+<body>
+    <!-- 网页分成三个部分
+            结构（html）
+            表现(CSS)
+            行为(javaScript)
+        CSS
+            层叠样式表
+            网页实际上是一个多层结构，通过CSS可以分别为网页每一层设置样式
+             而最终我们能看到的只是网页最上边的一层
+            总结：CSS就是用来设置网页中元素的样式，美化用的
+    
+    -->
+
+    <!-- 
+        方式：内联样式，行内样式
+            在标签内部通过style属性来设置元素的样式
+            不建议使用
+            缺点：当如果工作过程中都写内联样式时候，后期维护上如果是有需求修改，那么得一个一个修改
+                只对单一标签产生效果，其他标签想要产生效果需要都添加样式
+
+     -->
+    <p style="color: red; font-size: 14px;">测试CSS样式修改，改变颜色</p>
+</body>
+</html>

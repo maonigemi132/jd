@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 伪元素  表示页面中一些特殊的并不真实的存在的元素
+                伪元素使用 ：：开头
+            ::first-letter 表示第一个字母
+            ::first-line 表示第一行
+            ::selection 表示选中的内容
+            ::before 元素的开始位置
+            ::after 元素的最后
+
+                ::before和::after 必须结合content属性使用
+        
+        */
+        p::first-letter{
+            color: green;
+            font-size: 20px;
+        }
+        p::first-line{
+            color: indianred;
+        }
+        div::after{
+            content:"attr(222)";
+        }
+
+        p::selection{
+            color: lavender;
+        }
+        div::before{
+            content: "22222";
+        }
+
+    </style>
+</head>
+<body>
+    <div>Hello Hello</div>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur recusandae sapiente illum, incidunt consequatur assumenda dignissimos, enim unde dolorem quis cum praesentium? Dignissimos necessitatibus officiis deleniti sunt ut earum laudantium?</p>
+</body>
+</html>

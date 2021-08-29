@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* 
+            默认情况下的话，盒子课件课的大小是由内容区，内边距和边框共同决定
+                box-sizing 用来设置盒子的尺寸计算方法（设置width和height的作用）
+
+                content-box 默认值，宽度和高度用来设置内容区的大小
+                border-box 宽度和高度用来设置整个盒子的可见框大小
+                    设置了 border-box那么width和heigh  指的是内容区 和 内边距 和 边框的总大小
+                    会减少内容区的空间，如果用了整个属性的话那么其实也就可以不用考虑计算盒子的大小了
+                    
+                
+        */
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            padding: 10px;
+            border: 10px red solid;
+
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="box"></div>
+</body>
+</html>

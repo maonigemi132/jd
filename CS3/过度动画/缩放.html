@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+            margin: 100px auto;
+
+            /* 变形原点 默认值是center */
+            transform-origin: 0 0 ;
+        }
+
+            .box:hover{
+                /* 
+                对元素进行缩放
+                    scale()双方向的缩放
+                    scalex()水平方向缩放
+                    scaley()垂直方向缩放
+                 */
+                transform: scale(2);
+            }
+    </style>
+
+</head>
+<body>
+        <div class="box">
+
+        </div>
+
+</body>
+</html>

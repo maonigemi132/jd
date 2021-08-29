@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 500px;
+            border-bottom: 10px black solid;
+            margin: 50px auto;
+            overflow: hidden;
+        }
+
+        .box div{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            float: left;
+            animation: radius 1s infinite linear forwards alternate;
+        }
+
+        .box .box1{
+            animation-delay: 2.1s;
+            background-color: blanchedalmond;
+        }
+        .box .box2{
+            background-color: khaki;
+            animation-delay: 2.3s;
+        }
+
+        .box .box3{
+            background-color: indianred;
+            animation-delay: 2.6s;
+        }
+        .box .box4{
+            background-color: black;
+            animation-delay: 2.8s;
+        }
+
+
+        @keyframes radius{
+            from{
+                margin-top: 0px;
+                
+            }
+
+           
+
+            to{
+                margin-top: 400px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+.box{
+    width: 200px;
+    height: 200px;
+    p{
+        color: rebeccapurple;
+    }
+}
+
+//变量，在变量中可以存储一个任意的值
+//并且我们可以在需要的时候，任意修改变量中的值
+//变量的语法 @变量名
+@widths:100px;
+@colors:red;
+@box:box;
+p{
+    // 使用变量的时候，如果是直接使用则以 @变量名的形式使用即可
+    width: @widths;
+    color: @colors;
+}
+
+//作为类名使用的时候 格式上是需要  @{变量名}的方式声明使用
+.@{box}{
+    width: @widths;
+}
+
+@d:200px;
+@d:300px;
+
+// 就近原则
+div{
+    @d:400px;
+    height: @d;
+}
+
+div{
+    width: 300px;
+    height: $width;
+}
+
+div{
+    //使用伪类选择器的时候如果是当前类使用就必须使用&:伪类的方式声明
+    //或者如果是子类使用伪类时候可以直接 p:hover方式
+    &:hover{
+        color: @colors;
+    }
+    //代表子类
+    >.box3{
+        color: red;
+    }
+    //&也可以说表示外层的元素 如果是.box1 &语法就表示.box1 下的div子元素
+    .box1 &{
+        width: 200px;
+    }
+    
+}
+
+//extend()对当前选择器扩展指定选择器的样式（分组选择器）
+//使用上也可以理解为java中继承问题继承了P1的样式
+//但同时也可以在这基础上自己如果有单独想要写的样式那么就可以使用到这种方式
+.p1{
+    width: 200px;
+    height: 200px;
+}
+
+.p2:extend(.p1){
+    color:ghostwhite
+}
+
+//方式二
+.p3{
+    //直接对指定的样式进行引用  这种情况缺点其实相当于复制了再写一份给到P3没有上面继承性好
+    .p1();
+}
+
+//使用类选择器时可以在选择器后边添加一个括号，这时我么实际上就创建了一个mixins
+.p4(){
+    width: 400px;
+    height: 100px;
+    background-color: #bfa;
+}
+.p5{
+    .p4();
+}
+
+
+//混合函数  在混合函数中可以直接设置变量
+//.test(@w:100px,@h:100px,@bg-color:red)
+.test(@w,@h,@bg-color){
+    width: @w;
+    height: @h;
+    color: @bg-color;
+}
+
+div{
+    //调用混合函数，按照顺序传递参数
+    .test(200px,200px,red);
+}
+
+//average取两个颜色之间的中间颜色值
+span{
+    color: average(red,yellow);
+}
+
+

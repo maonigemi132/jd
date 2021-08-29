@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./fa/css/all.css">
+        <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+
+            .clearfix::after,
+            .clearfix::before{
+                clear: both;
+                content: '';
+                display: table;
+            }
+
+    
+            .nei{
+                margin: 200px auto;
+                width: 240px;
+                box-shadow: 0px 0px 8px rgba(0, 0, 0,0.5);
+            }
+            /*  图片 */
+            .box img{
+                vertical-align: bottom;
+                
+            }
+
+            .box2{
+                margin: 14px 18px;
+                font-size: 14px;
+            }
+
+            .box2 h3{
+                color: #717171;
+                font-size: 18px;
+                margin-bottom: 13px;
+            }
+           
+         
+
+            .box2 h4{
+                margin-bottom: 14px;
+            }
+            .box2 h4,p{
+                color: #B4B2C8;
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            .box3{
+                border-top: 1px #E9E9E9 solid;
+                color: #DDDDDD;
+            }
+            .box3 .lv{
+                color: #B9CB41;
+            }
+
+            .box3 .yi{
+                margin: 14px 0px;
+                margin-left: 16px;
+                float: left;
+            }
+            .box3 p{
+                float: right;
+                margin: 14px 21px;
+            }
+        </style>
+</head>
+<body>
+        <div class="nei">
+            <div class="box">
+                <img src="image/10/1.jpg" alt="公主">
+            </div>
+            <div class="box2">
+                    <h3>动画电影</h3>
+                    <h4><i class="fas fa-map-marker-alt"></i> 动画</h4>
+                    <p>这是一部迪士尼的动画电影，非常非常的好看</p>
+            </div>
+            <div class="box3 clearfix">
+                <div class="yi">
+                    <span><i class="fas fa-star lv"></i></span>
+                    <span><i class="fas fa-star lv"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                    <span><i class="fas fa-star"></i></span>
+                </div>
+                 <p><i class="fab fa-weibo"></i></p>
+            </div>
+
+        </div>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 元素水平方向布局：
+            元素在其父元素中水平方向的位置是由以下几个特性共同决定的
+                margin-left
+                border-left
+                padding-left
+                with
+                padding-right
+                border--right
+                margin—right
+
+             一个元素在其父元素中看，水平布局必须满足以下等式
+                margin—right + border-right +  padding-right + with +  padding-left +   border-left +  margin-left =其父元素内容去的宽度（必须满足）
+            
+                0+0+0+200+0+0+0=800
+
+                以上等式必须满足，如果结果使等式不满足，那么就是过度约束，则等式会自动调整，也就是游览器会自动分配调整
+                    -调整情况
+                        -如果以上这七个值没有auto情况，则游览器会自动调整margiht-right值使等式满足
+                    -这七个值中由三个值和设置为auto
+                        wiht
+                        marght-right
+                        marght-left
+
+                      0 + 0 + 0 + 200 + 0 + 0 + 0 = 800
+                        
+                        如果某个值为auto，则会自动调整为auto那个以等式成立
+
+                        如果将一个宽度和一个外边距设置为auto，则宽度调整到最大，设置为auto的外边距会自动为0
+                        如果将三个值都设置为auto，则外边距都是0 宽度最大
+                        如果将两个外边距设置为auto，宽度固定值，则会将外边距设置为相同的值
+                            所以我们经常利用这个特点使一个元素在其父元素中水平居中
+                            示例
+                               width：xxpx;
+                               margin： 0 auto；
+        
+         */
+
+         .box1{
+                width: 800px;
+                height: 200px;
+                border: 10px red solid;
+         }
+
+         .box2{
+                width: 200px;
+                height: 200px;
+                background-color: #bfa;
+                
+                /* margin-left: auto; */
+         }
+         
+    </style>
+</head>
+<body>
+
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{
+            border: 1px red solid;
+        }
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+            float: left;
+        }
+
+        /* 这种方法虽然是可行，设置清除浮动作用主要是消除box对box3的影响
+            但是塌陷解决方法上如果是在结构中添加这个标签是没有意义的，只是当做决高度塌陷问题
+            正常来说结构（html）就只做好自己事情就行，不应该把css行为的工作也做了。
+            现在是结果也做了表现的问题     
+        */
+        /* .box3{
+            clear: both; 
+        } */
+        .box::after{
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .box3{
+            height: 200px;
+            width: 200px;
+            float: left;
+            background-color: salmon;
+            
+        }
+
+        /* .box4{
+            height: 100px;
+            width: 100px;
+         
+            background-color: salmon;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <div class="box2"></div>
+        <div class="box3">
+            
+        </div>
+
+        <!-- <div  class="box4"></div> -->
+       
+    </div>
+        
+</body>
+</html>

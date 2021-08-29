@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+            .box1{
+                height: 200px;
+                width: 200px;
+                background-color: sandybrown;
+                /* border-top: 1px red solid; */
+                    /* overflow: hidden; */
+            }
+
+            .box2{
+                height: 100px;
+                width: 100px;
+                background-color: pink;
+                margin-top: 100px;
+            }
+
+            /* 这个样式既可以处理到外边距重叠问题
+            也可以处理的高度塌陷的问题 */
+            .clearfix::after,
+            .clearfix::before{
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+
+        </style>
+</head>
+<body>
+    <div class="box1 clearfix">
+        <div class="box2"></div>
+
+    </div>
+</body>
+</html>

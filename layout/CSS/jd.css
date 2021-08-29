@@ -1,0 +1,582 @@
+/* 多色图标 */
+.icon {
+    width         : 1em;
+    height        : 1em;
+    vertical-align: -0.15em;
+    fill          : currentColor;
+    overflow      : hidden;
+    font-size     : 14px;
+}
+
+
+/* 导航条最外层 */
+.nav-top {
+    background-color: #E3E4E5;
+    border-bottom   : 1px #E3E4E5 solid;
+    line-height     : 30px;
+    height          : 30px;
+}
+
+/* 内层 */
+.nav-inside {
+    width : 1190px;
+    margin: 0px auto;
+
+}
+
+/* 导航条最左边导航地址 */
+.top-left {
+    float   : left;
+    position: relative;
+
+}
+
+/* 设置所有超链接以及span的字体颜色以及去下划线 */
+.nav-inside a,
+span {
+    color          : #999;
+    text-decoration: none;
+}
+
+/* 设置所有超链接的颜色 */
+.nav-inside a:hover {
+    color: red;
+}
+
+/* 设置城市列表效果 */
+.top-left .city-list {
+    display         : none;
+    width           : 320px;
+    background-color: white;
+    border          : 1px rgb(204, 204, 204) solid;
+    position        : absolute;
+    top             : 31px;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+
+}
+
+.top-city {
+    padding : 0px 10px;
+    border  : 1px transparent solid;
+    position: relative;
+    z-index : 1;
+}
+
+.top-left:hover .top-city {
+    background-color: white;
+    border          : 1px rgb(204, 204, 204) solid;
+    border-bottom   : none;
+    padding-bottom  : 1px;
+}
+
+
+.top-city .iconfont {
+    color    : #f10215;
+    font-size: 14px;
+}
+
+.top-left:hover>.city-list {
+    display: block;
+
+}
+
+
+/* 城市区域 */
+.city-list-top {
+    width : 300px;
+    margin: 6px 14px 12px;
+}
+
+.city-list-top .city-list-height {
+
+    float: left;
+    width: 60px;
+
+}
+
+
+
+.city-list-height a {
+    float  : left;
+    padding: 0px 6px;
+
+
+
+}
+
+.city-list-top a:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+
+
+
+/* 地区专享vip */
+.city-list-vip .city-vip-line {
+    width      : 280px;
+    border-top : 1px dotted #eee;
+    margin-left: 18px;
+
+
+}
+
+.city-list-vip h4 {
+    width : 100px;
+    color : #8f8f8f;
+    margin: 10px 18px 4px;
+}
+
+.city-list-vip .chine-inter {
+    width : 70px;
+    float : left;
+    margin: 0px 70px 0px 18px;
+}
+
+.city-list-vip .city-vip-line {
+    clear: both;
+}
+
+.city-list-vip .foreign-country {
+    width      : 120px;
+    float      : left;
+    margin-left: 18px;
+}
+
+
+
+
+/* 导航栏右边 */
+.top-right {
+    float: right;
+}
+
+
+.top-right .reds {
+    color: #f10215;
+}
+
+.spacer {
+    width           : 1px;
+    height          : 10px;
+    background-color: #ccc;
+    margin          : 12px 12px 0px;
+}
+
+.top-right .iconfont {
+    color: #999;
+
+}
+
+
+/*我的京东*/
+.top-right .myjd {
+    display         : none;
+    width           : 280px;
+    background-color: white;
+    position        : absolute;
+    border          : 1px rgb(204, 204, 204) solid;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+    top             : 30px;
+
+}
+
+.myjd li {
+    width      : 120px;
+    margin-left: 10px;
+}
+
+.processor-wai:hover .processor-jd {
+    background-color: white;
+    border          : 1px rgb(204, 204, 204) solid;
+    border-bottom   : none;
+
+}
+
+.processor-wai {
+    position: relative;
+}
+
+.processor-jd {
+    padding : 0px 2px;
+    position: relative;
+    border  : 1px transparent solid;
+    top     : -1px;
+    z-index : 22;
+
+}
+
+.processor-wai:hover>.myjd {
+    display: block;
+}
+
+.myjd ul {
+    margin-top: 4px;
+}
+
+.myjd-line {
+    border: 1px solid rgb(241, 241, 241);
+}
+
+
+/* 企业 */
+.enterprise {
+    width           : 174px;
+    position        : absolute;
+    border          : 1px rgb(204, 204, 204) solid;
+    background-color: white;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+    top             : 30px;
+    display         : none;
+}
+
+.enterprise li {
+    width: 84px;
+}
+
+.enterprise ul {
+    margin-left: 6px;
+}
+
+.processor-wai:hover>.enterprise {
+    display: block;
+}
+
+/* 客户服务 */
+.top-client {
+    position        : absolute;
+    width           : 170px;
+    border          : 1px rgb(204, 204, 204) solid;
+    background-color: white;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+    top             : 30px;
+    right           : 0px;
+    display         : none;
+}
+
+.top-client li,
+h4 {
+    width: 80px;
+    color: #8f8f8f;
+
+}
+
+.top-client ul,
+h4 {
+    margin-top : 2px;
+    margin-left: 10px;
+}
+
+
+
+.client-jd span {
+    padding : 0px 4px;
+    position: relative;
+    border  : 1px transparent solid;
+    top     : -1px;
+    z-index : 22;
+}
+
+.processor-wai:hover .client-jd span {
+    background-color: white;
+    border          : 1px rgb(204, 204, 204) solid;
+    border-bottom   : none;
+    z-index         : 9999;
+}
+
+
+.processor-wai:hover .top-client {
+    display: block;
+}
+
+
+/* 网站导航 */
+.Website-nav {
+    position        : absolute;
+    width           : 1188px;
+    border          : 1px rgb(204, 204, 204) solid;
+    background-color: white;
+    box-shadow      : 0 2px 2px rgba(0, 0, 0, .2);
+    right           : -80px;
+    padding         : 20px 0px;
+    display         : none;
+    top             : 30px;
+}
+
+.Website-nav .Website-nav-i1 ul {
+    width       : 360px;
+    color       : #999;
+    border-right: 1px solid rgb(241, 241, 241);
+    float       : left;
+    margin-left : 10px;
+}
+
+.Website-nav .Website-nav-i1 ul li {
+    width      : 80px;
+    margin-left: 10px;
+    line-height: 20px;
+    margin-top : 4px;
+
+}
+
+.Website-nav-i1 p {
+    margin-left: 10px;
+    line-height: 20px;
+    font-weight: 800;
+    color      : #666666;
+}
+
+.Website-nav-i2,
+.Website-nav-i3 {
+    width       : 260px;
+    color       : #999;
+    border-right: 1px solid rgb(241, 241, 241);
+    float       : left;
+    margin-left : 4px;
+}
+
+.Website-nav-i2 ul li,
+.Website-nav-i3 ul li,
+.Website-nav-i4 ul li {
+    width      : 74px;
+    margin-left: 10px;
+    line-height: 20px;
+    margin-top : 4px;
+}
+
+.Website-nav-i2,
+.Website-nav-i3 p,
+.Website-nav-i4 p {
+    margin-left: 10px;
+    line-height: 20px;
+    font-weight: 800;
+    color      : #666666;
+}
+
+.Website-nav-i4 {
+    width      : 260px;
+    color      : #999;
+    float      : left;
+    margin-left: 4px;
+}
+
+
+.processor-wai:hover .Website-jd span {
+
+    background-color: white;
+    border          : 1px rgb(204, 204, 204) solid;
+    border-bottom   : none;
+
+}
+
+
+.Website-jd span {
+    padding : 0px 4px;
+    position: relative;
+    border  : 1px transparent solid;
+    top     : -1px;
+    z-index : 9999;
+}
+
+
+.processor-wai:hover .Website-nav {
+    display: block;
+}
+
+
+/* 搜索栏部分最外围div */
+.select-guide {
+    background-color: white;
+    border-bottom   : 1px #DDDDDD solid;
+}
+
+.select-guide a {
+    text-decoration: none;
+}
+
+/* 100周年 */
+.select-inside {
+    width : 1190px;
+    height: 141px;
+    margin: 0px auto;
+}
+
+.select-image {
+    width           : 190px;
+    height          : 120px;
+    background-color: red;
+    margin          : 8px 0px;
+    float           : left;
+}
+
+.select-image img {
+    width : 190px;
+    height: 120px;
+}
+
+
+/* 购物搜索栏 */
+.search-shopping {
+    float   : left;
+    width   : 710px;
+    height  : 56px;
+    position: relative;
+    left    : 70px;
+}
+
+form {
+    float: left;
+}
+
+
+.search-shopping .shopping-text {
+    border     : 2px #E2231A solid;
+    width      : 486px;
+    height     : 34px;
+    outline    : none;
+    text-indent: 20px;
+    position   : relative;
+}
+
+
+.shopping-btn {
+    width           : 60px;
+    height          : 38px;
+    padding-bottom  : 2px;
+    margin-left     : -4px;
+    background-color: #e1251b;
+    border          : 1px #E2231A solid;
+
+}
+
+
+.shopping-btn i {
+    color: white;
+}
+
+.shopping-btn:hover {
+    background-color: #c81623;
+}
+
+.phone {
+    position: absolute;
+    right   : 230px;
+    top     : 24px;
+}
+
+/* 购物车 */
+.shopping-car {
+    width           : 130px;
+    height          : 34px;
+    background-color: white;
+    border          : 1px #eeeeee solid;
+    float           : left;
+    margin-left     : 16px;
+    padding         : 1px;
+    position        : relative;
+}
+
+.shopping-car:hover{
+    outline: 1px solid #c81623;
+}
+
+.shopping-mecar {
+    line-height: 34px;
+}
+
+.shopping-mecar a,
+.scar{
+    color: #e1251b;
+}
+
+.shopping-mecar .scar {
+    font-size  : 18px;
+    font-weight: 600;
+    margin     : 0px 12px 0px 15px;
+}
+
+.shopping-mecar span {
+    position        : absolute;
+    width           : 12px;
+    height          : 14px;
+    padding-left    : 6px;
+    border-radius   : 50%;
+    line-height     : 12px;
+    background-color: #e1251b;
+    color           : white;
+    left            : 26px;
+    top             : 2px;
+}
+
+.shopping-mecar a {
+    vertical-align: top;
+}
+
+.shopping-text,
+.shopping-car {
+    margin-top: 18px;
+}
+
+
+
+
+
+/* 搜索栏下边的秒杀推荐栏 */
+.shopping-recom {
+    width      : 550px;
+    float      : left;
+    margin-left: 70px;
+    line-height: 24px;
+    margin-top : 4px;
+}
+
+
+.recom-one a {
+    margin: 0px 10px 0px 0px;
+    color : #999;
+}
+
+.recom-one a:hover,.colors:first-of-type a:hover{
+    color: #c81623;
+}
+
+.colors:first-of-type a{
+    color: #e1251b;
+}
+
+
+.select-seckill{
+    width: 770px;
+    height: 36px;
+    float: left;
+    margin-top: 23px;
+    margin-left: 38px;
+}
+
+
+/* 搜索栏下边的秒杀推荐栏 */
+.select-seckill-1 li{
+    line-height: 36px;
+    float: left;
+    font-size: 15px;
+    margin-right: 22px;
+    margin-top: -3px;
+}
+
+.select-seckill-1 a{
+    color: #333
+}
+
+.select-seckill-1  a:hover,.select-seckill-1 .odd-red  a:hover{
+        color: #c81623;
+}
+
+.select-seckill-1 .odd-red a{
+    color: #e1251b;
+    font-weight: 800;
+}
+
+
+
+/*中间部分  */
+
+

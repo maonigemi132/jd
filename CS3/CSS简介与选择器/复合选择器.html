@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 交集选择器
+                作用：选中同时符合多个条件的元素
+                语法：选择器1选择器2
+                注意点：交集选择器中如果有元素选择器，必须使用元素选择器开头
+        
+         */
+        div.aa{
+            font-size: 30px;
+           
+        }
+
+        /* 选择器分组（并级选择器）
+            作用：同时选中多个选择器对应的元素
+            语法：选择器1，选择器2
+
+         */
+        .aa,.lei{
+            color: grey;
+        }
+        *{
+           color: red;      
+        }
+
+    </style>
+</head>
+<body>
+    <div class="aa">
+        <h1 id="ids">标题</h1>      
+    </div>
+    <p>段落  我是段落段落段落</p>
+        <p class="lei">段落  我是段落段落段落</p>
+        <p>段落  我是段落段落段落</p>
+        <p>段落  我是段落段落段落</p>
+    
+</body>
+</html>

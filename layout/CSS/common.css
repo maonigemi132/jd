@@ -1,0 +1,35 @@
+/* 共同的样式 */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 解决塌陷问题 */
+.clearfix::after,
+.clearfix::before{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+body  ,h4{         
+    font:12px/1.5 Microsoft YaHei,Heiti SC,tahoma,arial,Hiragino Sans GB,"\5B8B\4F53",sans-serif;
+}
+
+body{
+    background-color: #f4f4f4;
+}
+
+.top-left,.top-right .myjd,.enterprise,.top-client,.Website-nav{
+    z-index: 999;
+}
+
+.processor-wai:hover .processor-jd{
+    z-index: 9999;
+}
+
+.recom-one li,.top-right li,span, .select-seckill li{
+    float: left;
+    list-style: none;
+}
+

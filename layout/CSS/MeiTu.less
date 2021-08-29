@@ -1,0 +1,187 @@
+a {
+    text-decoration: none;
+    color          : white;
+
+    &:hover {
+        color: rgb(197, 196, 196);
+    }
+}
+
+.wai{
+    background-color: black;
+}
+
+.top-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    height          : 48px;
+    background-color: #000;
+    padding         : 0px 14px;
+    display         : flex;
+    justify-content : space-between;
+    align-items     : center;
+
+
+
+}
+
+.left-menu {
+
+
+    //导航线
+    .menu-icon {
+        width : 18px;
+        height: 48px;
+
+        li {
+            height          : 1px;
+            width           : 18px;
+            position        : absolute;
+            background-color: white;
+            transform-origin: left center;
+            transition      : 0.5s;
+        }
+
+        li:nth-child(1) {
+            top: 18px;
+        }
+
+        li:nth-child(2) {
+            top: 24px;
+        }
+
+        li:nth-child(3) {
+            top: 30px;
+        }
+
+        // 鼠标移入或动画
+        &:hover {
+
+            li:nth-child(1) {
+                transform: rotateZ(42deg);
+            }
+
+            li:nth-child(2) {
+                opacity: 0;
+            }
+
+            li:nth-child(3) {
+                transform: rotateZ(-42deg)
+            }
+
+        }
+
+
+
+    }
+
+    &:hover .nav {
+
+        transition: .3s;
+        display   : block;
+    }
+
+    //设置菜单
+    .nav {
+        position        : absolute;
+        top             : 48px;
+        background-color: black;
+        left            : 0;
+        right           : 0;
+        bottom          : 0;
+        padding-top     : 60px;
+        display         : none;
+
+        li {
+            width        : 80%;
+            margin       : 0 auto;
+            border-bottom: 1px #4e4e4e solid;
+
+            a {
+                line-height: 44px;
+                font-size  : 14px;
+                display    : block;
+
+            }
+
+            &:last-child a {
+                display    : inline-block;
+                margin-left: 6px;
+            }
+        }
+
+        span {
+            color    : white;
+            font-size: 14px;
+        }
+
+    }
+
+
+}
+
+// 设置图标
+.logo {
+    a {
+
+        width           : 122px;
+        height          : 32px;
+        display         : block;
+        background-image: url("../image/18/dff63979.sprites-index@2x.png");
+        background-size : 400px 400px;
+        text-indent     : -999px;
+
+    }
+}
+
+//设置媒体查询
+@media only screen {
+
+    // 断点768
+    @media (min-width:768px) {
+        .left-menu {
+            order: 2;
+            // 添加增长系数，因为菜单log用户信息块增长系数都是0，可以通过增长系数自动调节菜单位置
+            flex:auto;
+            .nav{           
+                    display: flex;
+                    padding: 0;  
+                    position:static;
+                    background-color:transparent ;  
+                    justify-content: space-around;
+                    li{
+                        border: none;
+                        width: auto;
+                        margin: 0;
+                        a{
+                            line-height: 48px;
+                        }
+                    }
+
+                    span{
+                        display: none;
+                    }
+            }
+            //隐藏中间部分
+            .menu-icon {
+                display: none;
+            }
+            &:hover  .nav{
+                display: flex;
+            }
+
+        }
+        // 决定弹性元素的排序顺序
+        .logo {
+            order: 1;
+        }
+
+        //决定弹性元素的排序顺序
+        .right-user {
+            order: 3;
+        }
+
+    }
+
+
+}

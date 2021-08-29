@@ -1,0 +1,39 @@
+*{
+ 
+    padding: 0px;
+ 
+}
+
+.ss {   
+   
+    
+    height: 25px;
+    line-height: 25px;
+    padding-left: 18px;
+
+}
+
+.ce{
+    background-color: #FFFFFF;
+    width: 190px;
+    height: 450px;
+    padding: 10px 0px;
+    margin: 50px auto;
+}
+
+.ss a:hover{
+    color: red;
+}
+
+.ss:hover{
+    background-color: #d9d9d9;
+}
+
+.ss a{
+    text-decoration: none;
+    font-size: 14px;
+}
+
+body{
+    background-color: #F4F4F4;
+}

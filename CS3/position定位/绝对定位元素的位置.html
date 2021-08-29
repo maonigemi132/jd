@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            绝对定位的水平布局
+                left + margin-left + border-left +padding-lief + width + padding-right +border-right +margrin-right +right=包含块区的内容宽度
+
+            -当我们开启了绝对定位了以后：
+                    水平方向的布局等式就需要添加left 和right的两个值
+                        姿势规则和之前一样姿势多添加了两个值：
+                        当我们过度约束：
+                            如果9个值没有auto则自动调整right值以使等式满足
+                            如果auto， 则自动调整auto的值以使等式满足
+
+                         -可设置auto值
+                             margin width left right   
+
+                        -因为left和right 的值是默认auto，所以如果不设置left和right
+                        则等式不满足，会自动调整两个值
+
+                        垂直方向布局也是和水平方向一样9个值
+                       top 上外边距 上边框 内上边距  高度  下内边距 下边框 下外边距  bottom
+         */
+
+        .box1{
+            width: 400px;
+            height: 400px;
+            background-color: greenyellow;
+            position: relative;
+        } 
+
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            position: absolute;
+
+            margin: auto;
+            right: 0px;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+           
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
